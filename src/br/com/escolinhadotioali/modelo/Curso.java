@@ -2,7 +2,7 @@ package br.com.escolinhadotioali.modelo;
 
 public class Curso {
 	
-	public enum Status {
+	public static enum Status {
 		ATIVO, INATIVO;
 	}
 
