@@ -7,7 +7,7 @@ public class MainCurso {
 	public static void main(String[] args) {
 		try {
 
-			Curso curso1 = new Curso("Java Exceções", "Nico Steppat", 9.5, 12);
+			Curso curso1 = new Curso("Java Exceções: aprenda a criar, lançar e controlar exceções", "Nico Steppat", 9.5, 12);
 
 			System.out.println(curso1.getId());
 			System.out.println(curso1.getNome());
