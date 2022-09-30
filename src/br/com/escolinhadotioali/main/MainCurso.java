@@ -1,7 +1,6 @@
 package br.com.escolinhadotioali.main;
 
 import br.com.escolinhadotioali.modelo.Curso;
-import br.com.escolinhadotioali.modelo.StatusCurso;
 
 public class MainCurso {
 
@@ -28,7 +27,7 @@ public class MainCurso {
 			System.out.println(curso2.getStatus());
 			System.out.println("----------------");
 
-			Curso curso3 = new Curso(3, "Java e java.lang", "Nico Steppat", 9.5, 12, StatusCurso.ATIVO);
+			Curso curso3 = new Curso(3, "Java e java.lang", "Nico Steppat", 9.5, 12, Curso.Status.ATIVO);
 
 			System.out.println(curso3.getId());
 			System.out.println(curso3.getNome());

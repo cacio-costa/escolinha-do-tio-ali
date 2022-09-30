@@ -2,6 +2,11 @@ package br.com.escolinhadotioali.modelo;
 
 public class Curso {
 	
+	public enum Status {
+		ATIVO, INATIVO;
+	}
+
+	
 	private static final String PASTA_DO_SISTEMA = "/home/alexandre/brx"; // constante
 	
 	private static long proximoId = 1;
@@ -11,9 +16,9 @@ public class Curso {
 	private String instrutor;
 	private double nota;
 	private int numeroDeHoras;
-	private StatusCurso status;
+	private Status status;
 
-	public Curso(long id, String nome, String instrutor, double nota, int numeroDeHoras, StatusCurso status) {
+	public Curso(long id, String nome, String instrutor, double nota, int numeroDeHoras, Status status) {
 		if (id != proximoId) {
 			throw new IllegalArgumentException("O id informado é diferente do próximo id");
 		}
@@ -43,7 +48,7 @@ public class Curso {
 		this.instrutor = instrutor;
 		this.nota = nota;
 		this.numeroDeHoras = numeroDeHoras;
-		this.status = StatusCurso.ATIVO;
+		this.status = Status.ATIVO;
 		proximoId++;
 	}
 
@@ -87,11 +92,11 @@ public class Curso {
 		this.numeroDeHoras = numeroDeHoras;
 	}
 
-	public StatusCurso getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(StatusCurso status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 
